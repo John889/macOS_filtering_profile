@@ -1,0 +1,279 @@
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+		<plist version="1.0">
+		<dict>
+		<key>HasRemovalPasscode</key>
+		<true/>
+		<key>PayloadContent</key>
+		<array>
+
+
+ <!-- System DNS Payload. This one works only on Big Sur and later. -->
+ <!-- The DNS settings of a browser will override this. See below for the DNS settings of chrome and firefox -->
+<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>185.228.168.168</string>
+					<string>185.228.169.168</string>
+					<string>2a0d:2a00:1::</string>
+					<string>2a0d:2a00:2::</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://doh.cleanbrowsing.org/doh/family-filter/</string>
+			</dict>
+			<key>PayloadDisplayName</key>
+			<string>Cleanbrowsing DoH</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>7FB8767E-6297-4E3A-86D5-762811862EC4</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<true/>
+		</dict>
+ <!-- Chrome and Vivaldi payload -->
+		<dict>
+			<key>BlockExternalExtensions</key>
+			<true/>
+			<key>BrowserAddPersonEnabled</key>
+			<false/>
+			<key>BrowserGuestModeEnabled</key>
+			<false/>
+			<key>DeveloperToolsAvailability</key>
+			<integer>1</integer>
+			<key>DnsOverHttpsMode</key>
+			<string>secure</string>
+			<key>DnsOverHttpsTemplates</key>
+			<string>https://doh.cleanbrowsing.org/doh/family-filter/</string>
+
+			<key>ExtensionInstallForcelist</key>
+			<array>
+			<string>examplenonexistingchromeextension</string>
+			<string>examplenonexistingchromeextension2</string>
+			</array>
+
+			<key>ForceGoogleSafeSearch</key>
+			<true/>
+			<key>ForceSafeSearch</key>
+			<true/>
+			<key>IncognitoEnabled</key>
+			<false/>
+			<key>IncognitoModeAvailability</key>
+			<integer>1</integer>
+			<key>PayloadDisplayName</key>
+			<string>Google Chrome</string>
+			<key>PayloadIdentifier</key>
+			<string>com.google.Chrome</string>
+			<key>PayloadType</key>
+			<string>com.google.Chrome</string>
+			<key>PayloadUUID</key>
+			<string>CDD27118-E631-4713-81EE-06FA554348EE</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyMode</key>
+			<string>direct</string>
+			<key>SafeSitesFilterBehavior</key>
+			<true/>
+		</dict>
+
+<!-- Brave Browser payload -->
+		<dict>
+			<key>BlockExternalExtensions</key>
+			<true/>
+			<key>BrowserAddPersonEnabled</key>
+			<false/>
+			<key>BrowserGuestModeEnabled</key>
+			<false/>
+			<key>DeveloperToolsAvailability</key>
+			<integer>1</integer>
+			<key>DnsOverHttpsMode</key>
+			<string>secure</string>
+			<key>DnsOverHttpsTemplates</key>
+			<string>https://doh.cleanbrowsing.org/doh/family-filter/</string>
+
+			
+			<key>ExtensionInstallForcelist</key>
+			<array>
+				<string>examplenonexistingchromeextension</string>
+				<string>examplenonexistingchromeextension2</string>
+			</array>
+
+			<key>ForceGoogleSafeSearch</key>
+			<true/>
+			<key>ForceSafeSearch</key>
+			<true/>
+			<key>IncognitoModeAvailability</key>
+			<integer>1</integer>
+			<key>PayloadDisplayName</key>
+			<string>Brave Browser</string>
+			<key>PayloadIdentifier</key>
+			<string>com.brave.Browser</string>
+			<key>PayloadType</key>
+			<string>com.brave.Browser</string>
+			<key>PayloadUUID</key>
+			<string>562931DD-96DF-4513-886E-8B22B68FF28D</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyMode</key>
+			<string>direct</string>
+			<key>SafeSitesFilterBehavior</key>
+			<true/>
+			<key>TorDisabled</key>
+			<integer>1</integer>
+		</dict>
+<!-- Profile password protection payload -->
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Profile Removal</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.profileRemovalPassword</string>
+			<key>PayloadType</key>
+			<string>com.apple.profileRemovalPassword</string>
+			<key>PayloadUUID</key>
+			<string>8E458EFA-6537-4A5D-964F-2C304282B819</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>RemovalPassword</key>
+			<string>nofap</string>
+		</dict>
+<!-- Disabling specific System preferences panes payload -->
+<!-- Add panes that you want to block -->
+<!-- com.apple.preferences.users will block access to "Users and Groups" -->
+<!-- com.apple.preference.screentime  will block access to "Screen Time"-->
+<!-- com.apple.preference.security  will block access to "Security and Privacy" -->
+<!-- com.apple.preference.network will block access to "Network" -->
+<!-- com.apple.preferences.parentalcontrols  will block access to "Parental Controls" -->
+		<dict>
+			<key>DisabledPreferencePanes</key>
+			<array>
+				<string>com.apple.preferences.example</string>
+			</array>
+			<key>PayloadDisplayName</key>
+			<string>System Preferences #1</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.systempreferences</string>
+			<key>PayloadType</key>
+			<string>com.apple.systempreferences</string>
+			<key>PayloadUUID</key>
+			<string>B3531452-FEEF-42F5-AB4B-9F894B11C36D</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+<!-- Firefox payload -->
+		<dict>
+			<key>DNSOverHTTPS</key>
+			<dict>
+				<key>Locked</key>
+				<true/>
+				<key>ProviderURL</key>
+				<string>https://doh.cleanbrowsing.org/doh/family-filter/</string>
+			</dict>
+			<key>Proxy</key>
+  			<dict>
+   			 <key>Locked</key>
+   			 <true/>
+   			 <key>Mode</key>
+   			<string>none</string>
+ 			 </dict>
+ 		 <key>ExtensionSettings</key>
+ 		 <dict>
+		 <key>{54b996b1-a362-4162-b35c-0102d9de0dac}</key>
+	  	  <dict>
+  		  <key>installation_mode</key>
+  	   	  <string>force_installed</string>
+   		 <key>install_url</key>
+      		 <string>https://addons.mozilla.org/firefox/downloads/latest/safesearch_enforcer/latest.xpi</string>
+  		  </dict>
+
+   		 <key>leechblockng@proginosko.com</key>
+   		 <dict>
+   		   <key>installation_mode</key>
+   		    <string>force_installed</string>
+  		  <key>install_url</key>
+  		    <string>https://addons.mozilla.org/firefox/downloads/latest/leechblock-ng/latest.xpi</string>
+  		  </dict>
+ 
+ 		 </dict>
+    	<!-- If you want to block installing firefox extensions, under Default, change the value to false/					-->
+	<!-- Make sure you have installed all the extensions that you need before you make this change-->
+	<!-- This is completely optional. You don't have to do it, if you don't need it-->
+  			<key>InstallAddonsPermission</key>
+ 			 <dict>
+   				 <key>Default</key>
+   				 <true/>
+ 			 </dict>
+			<key>BlockAboutProfiles</key>
+ 			<true/>
+			<key>DisablePrivateBrowsing</key>
+			<true/>
+			<key>DisableSafeMode</key>
+  			<true/>
+			<key>EnterprisePoliciesEnabled</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Firefox #1</string>
+			<key>PayloadIdentifier</key>
+			<string>org.mozilla.firefox</string>
+			<key>PayloadType</key>
+			<string>org.mozilla.firefox</string>
+			<key>PayloadUUID</key>
+			<string>E87010B5-0C4E-4C9E-ACBE-ABC722AB63F1</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+
+ <!-- Safari's porn blocker. Blocks porn on Safari only, but sites added here will be blocked on all browsers. Add sites in this format: https://site.com/ -->
+ <!-- If it proves to be annoying and blocks safe sites, just change useContentFilter to false/ -->
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Parental Controls: Web Content Filter</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.familycontrols.contentfilter</string>
+			<key>PayloadType</key>
+			<string>com.apple.familycontrols.contentfilter</string>
+			<key>PayloadUUID</key>
+			<string>32F63041-A84F-419D-93DD-2383EAFCB935</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>filterBlacklist</key>
+			<array>
+				<string>ohyeah.com</string>
+			<string>https://badsite.com/</string>
+			</array>
+			<key>filterWhitelist</key>
+			<array>
+				<string>https://nofap.com/</string>
+				<string>https://yourbrainrebalanced.com/</string>
+				<string>https://rebootnation.org/</string>
+				<string>https://mediafire.com/</string>
+			</array>
+			<key>restrictWeb</key>
+			<true/>
+	<!-- If it proves to be annoying and blocks safe sites, just the value under useContentFilter to false/ -->
+			<key>useContentFilter</key>
+			<true/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+<string>Default removal password:nofap///You can modify this profile using TextEdit////System DNS: set to CleanBrowsing Family///Chromium browsers(Chrome, Brave, Vivaldi):Enforces Pluck Lite and Blocksi (FortiClient) extensions, enables built-in porn blocker + Search engine safe search, blocks incognito, private windows, Guest accounts, new accounts, installing external extensions, VPN/proxy extensions, blocks Tor on Brave. DNS on Chrome &amp; Brave set to Cleanbrowsing family (use fapsecure to unrestrict youtube and reddit)///////Firefox: Enforces Pluckeye, Leechblock and SafeSearch Enforcer extension, disables private browsing, safe mode, profile switch, DNS set to Cleanbrowsing family///////Safari: Enables built in porn blocker///You can block access to specific panes in "System Preferences". Editing instructions are included.</string>
+	<key>PayloadDisplayName</key>
+	<string>macOS restrictions profile</string>
+	<key>PayloadIdentifier</key>
+	<string>Sinner-MacBook-Air2.F73AC137-BE20-4CD8-BA93-D9722A0BFCAE</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>D2A6A886-A894-4323-B4D1-7D284788EE7C</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
