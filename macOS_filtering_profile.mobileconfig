@@ -228,6 +228,32 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
+			
+	 <!-- Siri's settings -->	
+			<dict>
+			<!-- Change the follwing to false/ to disable Siri -->
+			<key>Assistant Allowed</key>
+			<true/>
+			<key>Ironwood Allowed</key>
+			<true/>
+			<!-- The following disables profanity, if set to false/ -->
+			<key>Profanity Allowed</key>
+			<false/>
+			<key>PayloadDisplayName</key>
+			<string>Parental Controls: Dictation and Profanity</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.ironwood.support.9E4AFAF5-3391-48EC-B297-140EF2D4FE37</string>
+			<key>PayloadType</key>
+			<string>com.apple.ironwood.support</string>
+			<key>PayloadUUID</key>
+			<string>08DF7622-D9FE-43EF-A46C-EBDD4E91D5F0</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+			
+			
+			
+			
 
  <!-- Safari's porn blocker. Blocks porn on Safari only, but sites added here will be blocked on all browsers. Add sites in this format: https://site.com/ -->
  <!-- If it proves to be annoying and blocks safe sites, just change useContentFilter to false/ -->
