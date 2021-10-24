@@ -55,7 +55,9 @@
 
 			<key>ExtensionInstallForcelist</key>
 			<array>
-			<string>examplenonexistingchromeextension</string>
+			<!-- Leechblock -->
+			<string>blaaajhemilngeeffpbfkdjjoefldkok</string>
+			<!-- Add any extension you want -->
 			<string>examplenonexistingchromeextension2</string>
 			</array>
 
@@ -101,8 +103,10 @@
 			
 			<key>ExtensionInstallForcelist</key>
 			<array>
-				<string>examplenonexistingchromeextension</string>
-				<string>examplenonexistingchromeextension2</string>
+			<!-- Leechblock -->
+			<string>blaaajhemilngeeffpbfkdjjoefldkok</string>
+			<!-- Add any extension you want -->
+			<string>examplenonexistingchromeextension2</string>
 			</array>
 
 			<key>ForceGoogleSafeSearch</key>
