@@ -9,6 +9,7 @@
 
 
  <!-- System DNS Payload. This one works only on Big Sur and later. -->
+ <!-- You could add domain (website) exceptions. Those will not be processesed by the DNS.  -->
  <!-- The DNS settings of a browser will override this. See below for the DNS settings of chrome and firefox -->
 <dict>
 			<key>DNSSettings</key>
@@ -39,6 +40,10 @@
 					<string>NeverConnect</string>
 					<key>Domains</key>
 					<array>
+			 <!-- Website exceptions. This will only work on Safari browser unless you turn off DNSOverHTTPS for specific browser payloads (below)  -->
+			 <!-- I added youtube to allow unrestricted youtube while using cleanbrowsing family.  -->
+			 <!-- I also added some reddit domains to allow access to reddit. Domains for reddit images and videos were not added -->
+			 <!-- I also added some reddit domains to allow access to reddit. Domains for reddit images and videos were not added -->
 						<string>sendbirdproxyk8s.chat.redditmedia.com</string>
 						<string>chat.redditmedia.com</string>
 						<string>*.chat.redditmedia.com</string>
@@ -89,6 +94,8 @@
 			<false/>
 			<key>DeveloperToolsAvailability</key>
 			<integer>1</integer>
+			
+			<!-- To disable DNS Over HTTPS, change secure to off  -->
 			<key>DnsOverHttpsMode</key>
 			<string>secure</string>
 			<key>DnsOverHttpsTemplates</key>
@@ -136,6 +143,8 @@
 			<false/>
 			<key>DeveloperToolsAvailability</key>
 			<integer>1</integer>
+			
+			<!-- To disable DNS Over HTTPS, change secure to off  -->
 			<key>DnsOverHttpsMode</key>
 			<string>secure</string>
 			<key>DnsOverHttpsTemplates</key>
@@ -215,6 +224,8 @@
 		<dict>
 			<key>DNSOverHTTPS</key>
 			<dict>
+				<key>Enabled</key>
+				<true/>
 				<key>Locked</key>
 				<true/>
 				<key>ProviderURL</key>
