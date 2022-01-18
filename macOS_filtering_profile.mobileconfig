@@ -30,8 +30,6 @@
 				<key>OnDemandRules</key>
 			<array>
 			<dict>
-				<key>InterfaceTypeMatch</key>
-				<string>WiFi</string>
 				<key>Action</key>
 				<string>EvaluateConnection</string>
 				<key>ActionParameters</key>
