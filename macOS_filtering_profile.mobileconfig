@@ -25,6 +25,49 @@
 				<key>ServerURL</key>
 				<string>https://doh.cleanbrowsing.org/doh/family-filter/</string>
 			</dict>
+            			<key>OnDemandEnabled</key>
+            			 <integer>1</integer>
+				<key>OnDemandRules</key>
+			<array>
+			<dict>
+				<key>InterfaceTypeMatch</key>
+				<string>WiFi</string>
+				<key>Action</key>
+				<string>EvaluateConnection</string>
+				<key>ActionParameters</key>
+			<array>
+			<dict>
+					<key>DomainAction</key>
+					<string>NeverConnect</string>
+					<key>Domains</key>
+					<array>
+						<string>sendbirdproxyk8s.chat.redditmedia.com</string>
+						<string>chat.redditmedia.com</string>
+						<string>*.chat.redditmedia.com</string>
+						<string>emoji.redditmedia.com</string>
+						<string>s.reddit.com</string>
+						<string>reddit.com</string>
+						<string>strapi.reddit.com</string>
+						<string>redditstatic.com</string>
+						<string>www.redditstatic.com</string>
+						<string>gateway.reddit.com</string>
+						<string>alb.reddit.com</string>
+						<string>gql.reddit.com</string>
+						<string>out.reddit.com</string>
+						<string>oauth.reddit.com</string>
+						<string>snoovatar.reddit.com</string>
+						<string>watch.redd.it</string>
+						<string>www.reddit.com</string>
+						<string>youtube.com</string>
+						<string>m.youtube.com</string>
+						<string>www.youtube.com</string>
+						<string>youtube.googleapis.com</string>
+						<string>youtubei.googleapis.com</string>
+					</array>
+			</dict>
+			</array>
+			</dict>
+			</array>
 			<key>PayloadDisplayName</key>
 			<string>Cleanbrowsing DoH</string>
 			<key>PayloadIdentifier</key>
