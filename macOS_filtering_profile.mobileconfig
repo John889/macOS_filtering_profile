@@ -11,6 +11,7 @@
  <!-- System DNS Payload. This one works only on Big Sur and later and works best on Safari browser (could work on Firefox, check out the Firefox payload below). This doesn't work on Chromium-based browsers. -->
  <!-- You could add domain (website) exceptions. Those will not be processed by the DNS.  -->
  <!-- The DNS settings of a browser will override this. -->
+ <!-- The hosts file overrides the system's DNS and any browser specific DNS settings or payload. -->	
 <dict>
 			<key>DNSSettings</key>
 			<dict>
@@ -40,7 +41,7 @@
 					<string>NeverConnect</string>
 					<key>Domains</key>
 					<array>
-			 <!-- Website exceptions. This will only work on Safari browser unless you turn off DNSOverHTTPS for specific browser payloads (below)  -->
+			 <!-- Website exceptions. This will only work on Safari browser (could work on Firefox, check out firefox below)  -->
 			 <!-- I added youtube to allow unrestricted youtube while using cleanbrowsing family.  -->
 			 <!-- I also added some reddit domains to allow access to reddit. Domains for reddit images and videos were not added -->
 			 <!-- I also added some reddit domains to allow access to reddit. Domains for reddit images and videos were not added -->
