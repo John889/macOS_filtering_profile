@@ -97,7 +97,6 @@
 			<key>DeveloperToolsAvailability</key>
 			<integer>1</integer>
 			
-			<!-- To disable DNS Over HTTPS, change secure to off  -->
 			<key>DnsOverHttpsMode</key>
 			<string>secure</string>
 			<key>DnsOverHttpsTemplates</key>
@@ -146,7 +145,6 @@
 			<key>DeveloperToolsAvailability</key>
 			<integer>1</integer>
 			
-			<!-- To disable DNS Over HTTPS, change secure to off  -->
 			<key>DnsOverHttpsMode</key>
 			<string>secure</string>
 			<key>DnsOverHttpsTemplates</key>
@@ -228,7 +226,7 @@
 			<dict>
 			
 				<key>Enabled</key>
-				<!-- change this to false/ to disable the built-in DoH Client and to use the System's DNS -->	
+			<!-- change this to false/ to disable the built-in DoH Client and to use the System's DNS -->	
 				<true/>
 				<key>Locked</key>
 				<true/>
