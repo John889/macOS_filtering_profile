@@ -9,7 +9,7 @@
 
 
  <!-- System DNS Payload. This one works only on Big Sur and later. -->
- <!-- You could add domain (website) exceptions. Those will not be processesed by the DNS.  -->
+ <!-- You could add domain (website) exceptions. Those will not be processed by the DNS.  -->
  <!-- The DNS settings of a browser will override this. See below for the DNS settings of chrome and firefox -->
 <dict>
 			<key>DNSSettings</key>
