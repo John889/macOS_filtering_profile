@@ -64,6 +64,7 @@
 						<string>youtube.com</string>
 						<string>m.youtube.com</string>
 						<string>www.youtube.com</string>
+						<string>www.youtube-nocookie.com</string>
 						<string>youtube.googleapis.com</string>
 						<string>youtubei.googleapis.com</string>
 					</array>
