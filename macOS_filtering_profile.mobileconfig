@@ -8,9 +8,9 @@
 		<array>
 
 
- <!-- System DNS Payload. This one works only on Big Sur and later. -->
+ <!-- System DNS Payload. This one works only on Big Sur and later and works best on Safari browser (could work on Firefox, check out the Firefox payload below). This doesn't work on Chromium-based browsers. -->
  <!-- You could add domain (website) exceptions. Those will not be processed by the DNS.  -->
- <!-- The DNS settings of a browser will override this. See below for the DNS settings of chrome and firefox -->
+ <!-- The DNS settings of a browser will override this. -->
 <dict>
 			<key>DNSSettings</key>
 			<dict>
@@ -27,7 +27,7 @@
 				<string>https://doh.cleanbrowsing.org/doh/family-filter/</string>
 			</dict>
             			<key>OnDemandEnabled</key>
-            			 <integer>1</integer>
+            			<integer>1</integer>
 				<key>OnDemandRules</key>
 			<array>
 			<dict>
@@ -225,7 +225,9 @@
 		<dict>
 			<key>DNSOverHTTPS</key>
 			<dict>
+			
 				<key>Enabled</key>
+				<!-- change this to false/ to disable the built-in DoH Client and to use the System's DNS -->	
 				<true/>
 				<key>Locked</key>
 				<true/>
