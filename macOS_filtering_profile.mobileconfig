@@ -7,11 +7,151 @@
 		<key>PayloadContent</key>
 		<array>
 
+<dict>
+			<key>DNSSettings</key>
+			<dict>
+	<!-- This DNS payload contains a dummy non-existent DNS server. I added it to block images on twitter and other unsafe social media sites. -->
+ 	<!-- On macOS, it only on Big Sur and later and works best on Safari browser (could work on Firefox, check out the Firefox payload for macOS) and it doesn't work on Chromium-based browsers (macOS). -->
+ 	<!-- On macOS, the DNS settings of a browser will override this. -->
+ 	<!-- On iOS, all browsers and apps will be filtered -->
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerURL</key>
+				<string>https://nosite.com/doh/</string>
 
- <!-- System DNS Payload. This one works only on Big Sur and later and works best on Safari browser (could work on Firefox, check out the Firefox payload below). This doesn't work on Chromium-based browsers. -->
+				<key>ServerAddresses</key>
+				<array>
+					<string>18.28.68.18</string>
+				</array>
+
+				<key>SupplementalMatchDomains</key>
+				<array>
+		<!-- You could add more sites that you want to block to the list but if you add too many, all sites in the list will go through -->
+
+			 <!-- Block twitter images -->
+
+					<string>pbs.twimg.com</string>
+					<string>video.twimg.com</string>
+					<string>p16-tiktokcdn-com.akamaized.net</string>
+			 <!-- Block tiktok -->
+
+					<string>tiktok.com</string>
+					<string>tiktok.org</string>
+					<string>tiktokcdn.com</string>
+					<string>tiktokv.com</string>
+					<string>muscdn.com</string>
+					<string>musical.ly</string>
+					<string>musically.ly</string>
+					<string>v16-tiktokcdn-com.akamaized.net</string>
+					<string>p16-tiktokcdn-com.akamaized.net</string>
+					<string>v16-tiktokcdn-com.akamaized.net</string>
+					<string>mon.byteoversea.com</string>
+					<string>mon-va.byteoversea.com</string>
+					<string>abtest-va-tiktok.byteoversea.com</string>
+					<string>p16.hypstarcdn.com</string>
+					<string>sf-tb-sg.ibytedtos.com</string>
+					<string>xlog-va.byteoversea.com</string>
+					<string>dm-maliva16.byteoversea.com</string>
+					<string>dm.bytedance.com</string>
+					<string>sgali3.l.byteoversea.net</string>
+					<string>tiktokcdn-com.akamaized.net</string>
+					<string>ibytedtos.com</string>
+					<string>app.musemuse.cn</string>
+					<string>share.musemuse.cn</string>
+			 <!-- Block snapchat -->
+
+					<string>snap.com</string>
+					<string>snapchat.com</string>
+					<string>*.snapkit.com</string>
+					<string>sc-cdn.net</string>
+					<string>gcs.sc-cdn.net</string>
+					<string>st.sc-jpl.com</string>
+					<string>gtq.sct.sc-prod.net</string>
+					<string>gtq6.sct.sc-prod.net</string>
+					<string>am-prod.sc-jpl.com</string>
+					<string>s.sc-cdn.net</string>
+					<string>cf-st.sc-cdn.net</string>
+					<string>bolt-gcdn.sc-cdn.net</string>
+					<string>images.bitmoji.com</string>
+					<string>us-east1-aws.api.sc-gw.com</string>
+					<string>snap-storage-cdn.l.google.com</string>
+					<string>snap.events.mapbox.com</string>
+					<string>ms.sc-jpl.com</string>
+					<string>st-lb.sc-jpl.com</string>
+					<string>loc.sc-jpl.com</string>
+					<string>cognac-prod.appspot.com</string>
+					<string>scm.sc-jpl.com</string>
+					<string>us-central1-gcp.api.sc-gw.com</string>
+					<string>feelinsonice-hrd.appspot.com</string>
+					<string>feelinsonice.com</string>
+					<string>feelinsonice.appspot.com</string>
+					<string>appspot.l.google.com</string>
+					<string>data.flurry.com</string>
+					<string>cf-st.sc-cdn.net</string>
+					<string>gtq.sct.sc-prod.ne</string>
+					<string>tib.snssdk.com</string>
+					<string>loca.sc-jpl.com</string>
+					<string>d3cwhzzyyewihk.cloudfront.net</string>
+					<string>eu-west1-aws.duplex.sc-gw.com</string>
+			 <!-- Block instagram -->
+
+					<string>instagram.com</string>
+					<string>*.instagram.com</string>
+			 <!-- Block tumblr -->
+
+					<string>tumblr.com</string>
+					<string>*.tumblr.com</string>
+			 <!-- Block Pinterest -->
+					<string>pinterest.com</string>
+					<string>www.pinterest.com</string>
+					<string>www.pinterest.nz</string>
+					<string>www.pinterest.ph</string>
+					<string>investor.pinterestinc.com</string>
+					<string>www.pinterestcareers.com</string>
+					<string>www.pinterest.cl</string>
+					<string>www.pinterest.co.uk</string>
+					<string>www.pinterest.at</string>
+					<string>www.pinterest.ie</string>
+					<string>www.pinterest.es</string>
+					<string>www.pinterest.com.au</string>
+					<string>www.pinterest.com.mx</string>
+					<string>www.pinterest.ca</string>
+					<string>www.pinterest.dk</string>
+					<string>www.pinterest.fr</string>
+					<string>www.pinterest.de</string>
+					<string>www.pinterest.ch</string>
+					<string>www.pinterest.it</string>
+					<string>www.pinterest.pt</string>
+					<string>www.pinterest.ru</string>
+					<string>www.pinterest.co.kr</string>
+ 			
+				</array>
+			</dict>
+            			<key>OnDemandEnabled</key>
+            			<integer>1</integer>
+			<key>PayloadDisplayName</key>
+			<string>DNS Settings #1</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.744EE684-7E95-4AB9-83EC-B5A4C6BEBDC4</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>9AB02AAC-388F-4D2C-8582-D8ABBF487E16</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<true/>
+		</dict>
+
+
+
+ <!-- The following payload contains a real filtered DNS server (Cleanbrowsing Family) -->
+ <!-- System DNS Payload.  -->
+ <!-- On macOS, it only on Big Sur and later and works best on Safari browser (could work on Firefox, check out the Firefox payload for macOS) and it doesn't work on Chromium-based browsers (macOS). -->
+ <!-- On macOS, the DNS settings of a browser will override this. -->
+ <!-- On iOS, all browsers and apps will be filtered -->
  <!-- You could add domain (website) exceptions. Those will not be processed by the DNS.  -->
- <!-- The DNS settings of a browser will override this. -->
- <!-- The hosts file overrides the system's DNS and any browser specific DNS settings or payload. -->	
+
 <dict>
 			<key>DNSSettings</key>
 			<dict>
@@ -31,21 +171,23 @@
             			<integer>1</integer>
 				<key>OnDemandRules</key>
 			<array>
+			<key>OnDemandRules</key>
 			<dict>
 				<key>Action</key>
 				<string>EvaluateConnection</string>
 				<key>ActionParameters</key>
+
+
 			<array>
 			<dict>
 					<key>DomainAction</key>
 					<string>NeverConnect</string>
 					<key>Domains</key>
 					<array>
-			 <!-- Website exceptions. This is very useful when trying to connect to public hotspots/caprive portals. Add the login page to the exceptions  -->
-			 <!--	will only work on Safari browser (could work on Firefox, check out firefox below)  -->
+			 <!-- Website exceptions (will skip them)  -->
+			 <!-- On macOS, this will only work on Safari browser and Firefox if you turn off DNSOverHTTPS in the Firefox payload-->
 			 <!-- I added youtube to allow unrestricted youtube while using cleanbrowsing family.  -->
-			 <!-- I also added some reddit domains to allow access to reddit. Domains for reddit images and videos were not added -->
-			 <!-- I also added some reddit domains to allow access to reddit. Domains for reddit images and videos were not added -->
+			 <!-- I also added some reddit domains to allow access to reddit while using cleanbrowsing family. Domains for reddit images and videos were not added -->
 						<string>sendbirdproxyk8s.chat.redditmedia.com</string>
 						<string>chat.redditmedia.com</string>
 						<string>*.chat.redditmedia.com</string>
@@ -63,17 +205,21 @@
 						<string>snoovatar.reddit.com</string>
 						<string>watch.redd.it</string>
 						<string>www.reddit.com</string>
-						<string>neverssl.com</string>
 						<string>youtube.com</string>
 						<string>m.youtube.com</string>
 						<string>www.youtube.com</string>
 						<string>www.youtube-nocookie.com</string>
 						<string>youtube.googleapis.com</string>
 						<string>youtubei.googleapis.com</string>
+
 					</array>
 			</dict>
 			</array>
+
+
 			</dict>
+			
+
 			</array>
 			<key>PayloadDisplayName</key>
 			<string>Cleanbrowsing DoH</string>
