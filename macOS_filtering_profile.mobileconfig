@@ -6,6 +6,25 @@
 		<true/>
 		<key>PayloadContent</key>
 		<array>
+<!-- Profile password protection payload -->
+<!-- The default password to remove the profile is nofap -->
+<!-- Change the password and save it on lockbox.pluckeye.net then remove the password from here after you install the profile on your phone. -->
+
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Profile Removal</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.profileRemovalPassword</string>
+			<key>PayloadType</key>
+			<string>com.apple.profileRemovalPassword</string>
+			<key>PayloadUUID</key>
+			<string>8E458EFA-6537-4A5D-964F-2C304282B819</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>RemovalPassword</key>
+<!-- Change this password-->
+			<string>nofap</string>
+		</dict>
 
 <dict>
 			<key>DNSSettings</key>
@@ -353,21 +372,7 @@
 			<key>TorDisabled</key>
 			<integer>1</integer>
 		</dict>
-<!-- Profile password protection payload -->
-		<dict>
-			<key>PayloadDisplayName</key>
-			<string>Profile Removal</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.profileRemovalPassword</string>
-			<key>PayloadType</key>
-			<string>com.apple.profileRemovalPassword</string>
-			<key>PayloadUUID</key>
-			<string>8E458EFA-6537-4A5D-964F-2C304282B819</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-			<key>RemovalPassword</key>
-			<string>nofap</string>
-		</dict>
+
 <!-- Disabling specific System preferences panes payload -->
 <!-- Add panes that you want to block -->
 <!-- com.apple.preferences.users will block access to "Users and Groups" -->
