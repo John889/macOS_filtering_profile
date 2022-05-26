@@ -8,7 +8,7 @@
 		<array>
 <!-- Profile password protection payload -->
 <!-- The default password to remove the profile is nofap -->
-<!-- Change the password and save it on lockbox.pluckeye.net then remove the password from here after you install the profile on your phone. -->
+<!-- Change the password and save it on lockbox.pluckeye.net then remove the password from here after you install the profile. -->
 
 		<dict>
 			<key>PayloadDisplayName</key>
