@@ -203,12 +203,28 @@
 				<key>ServerURL</key>
 				<string>https://doh.cleanbrowsing.org/doh/family-filter/</string>
 			</dict>
-            			<key>OnDemandEnabled</key>
-            			<integer>1</integer>
+
 				<key>OnDemandRules</key>
 			<array>
-			<key>OnDemandRules</key>
-			<dict>
+
+				
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+					<key>InterfaceTypeMatch</key>
+					<string>Cellular</string>
+				</dict>
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+					<key>URLStringProbe</key>
+					<string>http://captive.apple.com/hotspot-detect.html</string>
+				</dict>
+
+				
+				
+				
+				<dict>
 				<key>Action</key>
 				<string>EvaluateConnection</string>
 				<key>ActionParameters</key>
