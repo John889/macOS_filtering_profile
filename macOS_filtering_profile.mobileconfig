@@ -162,7 +162,8 @@
  			
 				</array>
 			</dict>
-            			<key>OnDemandEnabled</key>
+            			<key>
+					andEnabled</key>
             			<integer>1</integer>
 			<key>PayloadDisplayName</key>
 			<string>DummyDNSBlock</string>
@@ -207,13 +208,15 @@
 				<key>OnDemandRules</key>
 			<array>
 
-				
+				<!-- Connect DNS automatically when using cellular data  -->
 				<dict>
 					<key>Action</key>
 					<string>Connect</string>
 					<key>InterfaceTypeMatch</key>
 					<string>Cellular</string>
 				</dict>
+				<!-- This will fix connection to wi-fi captive portals issues (hotels/airports)  -->
+
 				<dict>
 					<key>Action</key>
 					<string>Connect</string>
