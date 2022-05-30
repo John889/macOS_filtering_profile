@@ -26,20 +26,23 @@
 			<string>nofap</string>
 		</dict>
 
+
 <dict>
 			<key>DNSSettings</key>
 			<dict>
 
  	<!-- DNS settings -->
+ 	<!-- Disable wifi and mobile data before you install this profile so that the dns payloads work properly from the first time  -->
  	<!-- On macOS, only Big Sur and later versions are supported. Works best on Safari browser (could work on Firefox, check out the Firefox payload for macOS) and it doesn't work on Chromium-based browsers (macOS). -->
  	<!-- On macOS, the DNS settings of a browser will override this. -->
  	<!-- On iOS, all browsers and apps will be filtered -->
+ 	<!-- Important note: If you installed this profile then you wanted to make changes, uninstall the profile first from your phone or Mac and disable wifi and mobile data before re-installing it with your changes or else the DNS payloads might not work properly. Re-enable wifi and mobile data.  -->
+ 	<!-- Important note: If you installed the profile and you found that DNS settings were not working properly, uninstall it from your device (don't replace it) and disconnect wifi and mobile data then re-install it. Re-enable wifi and mobile data. -->
 
-
-	<!-- I added two DNS payloads and domains will get through them in order. (Dummy DNS > Cleanbrowsing filtered)    -->
-	<!-- The first payload has the SupplementalMatchDomains key which means that only domains added there will use the DNS and all other domains will pass to the next DNS payload  -->
-	<!-- This means that the second DNS payload (Cleanbrowsing Family) will be used by all domains except those added under SupplementalMatchDomains in the first payload.    -->
-	<!-- In the second DNS payload (clean browsing), you could add website exceptions under NeverConnect.  -->
+	<!-- I added three DNS payloads and domains will get through them in order. (Dummy DNS > unfiltered DNS> Cleanbrowsing filtered)    -->
+	<!-- The first two payload have the SupplementalMatchDomains key which means that only domains added there will use the DNS and all other domains will pass to the next DNS payload  -->
+	<!-- So the third DNS payload (Cleanbrowsing Family) will be used by all domains except those added under SupplementalMatchDomains in the first two payloads.    -->
+	<!-- In the third DNS payload (clean browsing), you could add website exceptions under NeverConnect.  -->
 	<!-- This will forward those domains to the network DNS. And it is very useful if you want to connect to sites only available in your work/hospital network or when using public hotspots/captive portals or if you want to unblock sites blocked by Cleanbrowsing Family DNS.  -->
 
 
@@ -77,57 +80,12 @@
 					<string>p16-tiktokcdn-com.akamaized.net</string>
 					<string>musical.ly</string>
 					<string>musically.ly</string>
-					<string>v16-tiktokcdn-com.akamaized.net</string>
-					<string>p16-tiktokcdn-com.akamaized.net</string>
-					<string>v16-tiktokcdn-com.akamaized.net</string>
-					<string>mon.byteoversea.com</string>
-					<string>mon-va.byteoversea.com</string>
-					<string>abtest-va-tiktok.byteoversea.com</string>
-					<string>p16.hypstarcdn.com</string>
-					<string>sf-tb-sg.ibytedtos.com</string>
-					<string>xlog-va.byteoversea.com</string>
-					<string>dm-maliva16.byteoversea.com</string>
-					<string>dm.bytedance.com</string>
-					<string>sgali3.l.byteoversea.net</string>
-					<string>tiktokcdn-com.akamaized.net</string>
-					<string>ibytedtos.com</string>
-					<string>app.musemuse.cn</string>
-					<string>share.musemuse.cn</string>
+
 			 <!-- Block snapchat -->
 
 					<string>snap.com</string>
 					<string>snapchat.com</string>
 					<string>*.snapkit.com</string>
-					<string>sc-cdn.net</string>
-					<string>gcs.sc-cdn.net</string>
-					<string>st.sc-jpl.com</string>
-					<string>gtq.sct.sc-prod.net</string>
-					<string>gtq6.sct.sc-prod.net</string>
-					<string>am-prod.sc-jpl.com</string>
-					<string>s.sc-cdn.net</string>
-					<string>cf-st.sc-cdn.net</string>
-					<string>bolt-gcdn.sc-cdn.net</string>
-					<string>images.bitmoji.com</string>
-					<string>us-east1-aws.api.sc-gw.com</string>
-					<string>snap-storage-cdn.l.google.com</string>
-					<string>snap.events.mapbox.com</string>
-					<string>ms.sc-jpl.com</string>
-					<string>st-lb.sc-jpl.com</string>
-					<string>loc.sc-jpl.com</string>
-					<string>cognac-prod.appspot.com</string>
-					<string>scm.sc-jpl.com</string>
-					<string>us-central1-gcp.api.sc-gw.com</string>
-					<string>feelinsonice-hrd.appspot.com</string>
-					<string>feelinsonice.com</string>
-					<string>feelinsonice.appspot.com</string>
-					<string>appspot.l.google.com</string>
-					<string>data.flurry.com</string>
-					<string>cf-st.sc-cdn.net</string>
-					<string>gtq.sct.sc-prod.ne</string>
-					<string>tib.snssdk.com</string>
-					<string>loca.sc-jpl.com</string>
-					<string>d3cwhzzyyewihk.cloudfront.net</string>
-					<string>eu-west1-aws.duplex.sc-gw.com</string>
 			 <!-- Block instagram -->
 
 					<string>instagram.com</string>
@@ -138,32 +96,11 @@
 					<string>*.tumblr.com</string>
 			 <!-- Block Pinterest -->
 					<string>pinterest.com</string>
-					<string>www.pinterest.com</string>
-					<string>www.pinterest.nz</string>
-					<string>www.pinterest.ph</string>
-					<string>investor.pinterestinc.com</string>
-					<string>www.pinterestcareers.com</string>
-					<string>www.pinterest.cl</string>
-					<string>www.pinterest.co.uk</string>
-					<string>www.pinterest.at</string>
-					<string>www.pinterest.ie</string>
-					<string>www.pinterest.es</string>
-					<string>www.pinterest.com.au</string>
-					<string>www.pinterest.com.mx</string>
-					<string>www.pinterest.ca</string>
-					<string>www.pinterest.dk</string>
-					<string>www.pinterest.fr</string>
-					<string>www.pinterest.de</string>
-					<string>www.pinterest.ch</string>
-					<string>www.pinterest.it</string>
-					<string>www.pinterest.pt</string>
-					<string>www.pinterest.ru</string>
-					<string>www.pinterest.co.kr</string>
+
  			
 				</array>
 			</dict>
-            			<key>
-					andEnabled</key>
+            			<key>OnDemandEnabled</key>
             			<integer>1</integer>
 			<key>PayloadDisplayName</key>
 			<string>DummyDNSBlock</string>
@@ -182,70 +119,33 @@
 
 
 
-
-
-
- <!-- The following payload contains a filtered DNS server (Cleanbrowsing Family) -->
- <!-- You could add domain (website) exceptions. Those will not be processed by the DNS and will be forwarded to your network DNS if you have your wifi's DNS set to automatic.  -->
- <!-- I added domains for YouTube and reddit to unrestricted YouTube and allow reddit while using Cleanbrowsing Family. Images and videos on reddit will remain blocked  -->
-
 <dict>
 			<key>DNSSettings</key>
 			<dict>
+
+
+
+
+<!-- The second DNS payload   -->
+<!-- This DNS payload contains an unfiltered  DNS server. I added it to allow reddit and YouTube unrestricted mode while using clean browsing family dns -->
+
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
+				<key>ServerURL</key>
+				<string>https://dns-unfiltered.adguard.com/dns-query</string>
+
 				<key>ServerAddresses</key>
 				<array>
-					<string>185.228.168.168</string>
-					<string>185.228.169.168</string>
-					<string>2a0d:2a00:1::</string>
-					<string>2a0d:2a00:2::</string>
-				</array>
-				<key>ServerURL</key>
-				<string>https://doh.cleanbrowsing.org/doh/family-filter/</string>
-			</dict>
+					<string>2a10:50c0::1:ff</string>
+					<string>2a10:50c0::2:ff</string>
+					<string>94.140.14.140</string>
+					<string>94.140.14.141</string>				</array>
 
-				<key>OnDemandRules</key>
-			<array>
-
-				<!-- Connect DNS automatically when using cellular data  -->
-				<dict>
-					<key>Action</key>
-					<string>Connect</string>
-					<key>InterfaceTypeMatch</key>
-					<string>Cellular</string>
-				</dict>
-				<!-- This will fix connection to wi-fi captive portals issues (hotels/airports)  -->
-
-				<dict>
-					<key>Action</key>
-					<string>Connect</string>
-					<key>URLStringProbe</key>
-					<string>http://captive.apple.com/hotspot-detect.html</string>
-				</dict>
-
-				
-				
-				
-				<dict>
-				<key>Action</key>
-				<string>EvaluateConnection</string>
-				<key>ActionParameters</key>
-
-
-			<array>
-			<dict>
-					<key>DomainAction</key>
-					<string>NeverConnect</string>
-					<key>Domains</key>
-
-			 <!-- Website exceptions (will skip them and forward them to the network DNS if the device's wifi DNS is set to automatic)  -->
-			 <!-- I added YouTube domains to unrestricted YouTube while using Cleanbrowsing family, and reddit domains to allow reddit access. -->
-			 <!-- Images and videos on reddit will remain blocked. To allow them, add those items: *.redd.it and *.redditmedia.com -->
-
-					<array>
-						<string>collegewebsite-example.com</string>
-						<string>public-hotspot-example.com</string>
+				<key>SupplementalMatchDomains</key>
+				<array>
+		<!-- You could add more sites but if you add too many, all sites in the list will pass through -->
+		<!-- I added YouTube domains to unrestrict YouTube while using Cleanbrowsing family, and reddit domains to allow reddit access. -->
+		<!-- Images and videos on reddit will remain blocked. To allow them, add those items: *.redd.it and *.redditmedia.com -->
 
 						<string>sendbirdproxyk8s.chat.redditmedia.com</string>
 						<string>chat.redditmedia.com</string>
@@ -270,6 +170,93 @@
 						<string>www.youtube-nocookie.com</string>
 						<string>youtube.googleapis.com</string>
 						<string>youtubei.googleapis.com</string>
+ 			
+				</array>
+			</dict>
+            			<key>OnDemandEnabled</key>
+            			<integer>1</integer>
+			<key>PayloadDisplayName</key>
+			<string>UnfilteredDNS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.56f69d61-c1d2-422b-989a-adeeb1b6ddc0</string>		
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>1cda01f8-b05b-4b0d-8675-44eeb5290564</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<true/>
+		</dict>
+
+
+
+
+
+
+
+ <!-- The following third DNS payload contains a filtered DNS server (Cleanbrowsing Family) -->
+ <!-- You could add domain (website) exceptions. Those will not be processed by the DNS and will be forwarded to your network DNS if you have your wifi's DNS set to automatic.  -->
+
+
+<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>185.228.168.168</string>
+					<string>185.228.169.168</string>
+					<string>2a0d:2a00:1::</string>
+					<string>2a0d:2a00:2::</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://doh.cleanbrowsing.org/doh/family-filter/</string>
+			</dict>
+
+				<key>OnDemandRules</key>
+			<array>
+
+				
+				<!-- Connect DNS automatically when using cellular data  -->
+
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+					<key>InterfaceTypeMatch</key>
+					<string>Cellular</string>
+				</dict>
+				 <!-- This will fix connection to wi-fi captive portals issues (hotels/airports)  -->
+
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+					<key>URLStringProbe</key>
+					<string>http://captive.apple.com/hotspot-detect.html</string>
+				</dict>
+
+				
+				
+				
+				<dict>
+				<key>Action</key>
+				<string>EvaluateConnection</string>
+				<key>ActionParameters</key>
+
+
+			<array>
+			<dict>
+					<key>DomainAction</key>
+					<string>NeverConnect</string>
+					<key>Domains</key>
+
+			 <!-- Website exceptions (will skip them and forward them to the network DNS if the device's wifi DNS is set to automatic)  -->
+
+					<array>
+						<string>collegewebsite-example.com</string>
+						<string>public-hotspot-example.com</string>
+
 
 					</array>
 			</dict>
@@ -293,6 +280,7 @@
 			<key>ProhibitDisablement</key>
 			<true/>
 		</dict>
+
 
 
  <!-- Chrome and Vivaldi payload -->
